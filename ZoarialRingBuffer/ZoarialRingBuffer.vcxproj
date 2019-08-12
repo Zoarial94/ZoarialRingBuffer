@@ -66,8 +66,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\ZoarialRingBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc\ZoarialRingBuffer.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
