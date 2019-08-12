@@ -1,6 +1,6 @@
 #pragma once
 
-class ZoarialRingBuffer {
+class ZoarialStringBuffer {
 private:
 
 public:
