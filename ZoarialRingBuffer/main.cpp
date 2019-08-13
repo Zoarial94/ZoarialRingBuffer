@@ -1,24 +1,42 @@
-#include <wiringPi.h>
-
-// LED Pin - wiringPi pin 0 is BCM_GPIO 17.
-// we have to use BCM numbering when initializing with wiringPiSetupSys
-// when choosing a different pin number please use the BCM numbering, also
-// update the Property Pages - Build Events - Remote Post-Build Event command 
-// which uses gpio export for setup for wiringPiSetupSys
-#define	LED	17
+#include "ZoarialStringBuffer.h"
+#include <iostream>
 
 int main(void)
 {
-	wiringPiSetupSys();
+	ZoarialStringBuffer buffer(256);
 
-	pinMode(LED, OUTPUT);
 
-	while (true)
-	{
-		digitalWrite(LED, HIGH);  // On
-		delay(500); // ms
-		digitalWrite(LED, LOW);	  // Off
-		delay(500);
-	}
+	buffer.addString("Testing String");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Test Again");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Testing String");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Test Again");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Testing String");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Test Again");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Testing String");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Test Again");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Testing String");
+	std::cout << buffer.getString() << std::endl;
+	buffer.addString("Test Again");
+	buffer.addString("Test Again");
+	buffer.addString("Test Again");
+	buffer.addString("Test Again");
+	buffer.addString("Test Again");
+	buffer.addString("Test Again");
+	std::cout << buffer.getString() << std::endl;
+	std::cout << buffer.getString() << std::endl;
+	std::cout << buffer.getString() << std::endl;
+	std::cout << buffer.getString() << std::endl;
+	std::cout << buffer.getString() << std::endl;
+	std::cout << buffer.getString() << std::endl;
+	std::cout << buffer.getString() << std::endl;
+
 	return 0;
 }
